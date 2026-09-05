@@ -22,6 +22,12 @@
 
     .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 
+    /* Navigation Bar */
+    .navbar { background: var(--bg-secondary); padding: 15px 20px; border-radius: 8px; margin-bottom: 25px; border: 1px solid var(--border); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; padding: 6px 12px; border-radius: 4px; transition: all 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); background: var(--bg-card); }
+
     /* Header Profile */
     header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background: var(--bg-secondary); padding: 40px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 30px; gap: 20px; }
     .profile-info h1 { font-size: 2.5rem; color: var(--text-main); letter-spacing: -0.5px; }
@@ -62,10 +68,19 @@
 <body>
 
   <div class="container">
+    <!-- Multi-Page Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
     <!-- Header Section -->
     <header>
       <div class="profile-info">
-        <h1>Anzil</h1>
+        <h1>Anzil KM</h1>
         <h2>DevOps & Cloud Systems Specialist</h2>
         <p><i class="fa-solid fa-location-dot"></i> Kerala, India &nbsp;|&nbsp; <i class="fa-solid fa-network-wired"></i> CCNA Trained &nbsp;|&nbsp; <i class="fa-brands fa-aws"></i> AWS Practitioner</p>
         <div class="status-badge">
@@ -76,7 +91,7 @@
 
     <!-- Main Grid -->
     <div class="grid">
-      <!-- Left Column: Summary & Projects -->
+      <!-- Left Column: Summary & Featured Projects -->
       <div>
         <div class="section">
           <h2 class="section-title"><i class="fa-solid fa-user"></i> Professional Summary</h2>
@@ -86,7 +101,7 @@
         </div>
 
         <div class="section">
-          <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> DevOps Projects</h2>
+          <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Featured Projects</h2>
           
           <div class="project-card">
             <h3>Automated Resume Deployment Pipeline</h3>
