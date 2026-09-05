@@ -2,32 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Anzil | Professional Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anzil | DevOps Engineer</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; background-color: #f9f9f9; }
-    .container { max-width: 800px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1 { color: #0066cc; border-bottom: 2px solid #0066cc; padding-bottom: 5px; }
-    h2 { color: #444; margin-top: 20px; }
-    ul { padding-left: 20px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; color: #333; line-height: 1.6; }
+    .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; }
+    header { background: #0f172a; color: #fff; padding: 40px; text-align: left; }
+    header h1 { font-size: 2.2rem; font-weight: 700; color: #38bdf8; }
+    header p { font-size: 1.1rem; color: #94a3b8; margin-top: 5px; }
+    .contact-info { margin-top: 15px; display: flex; gap: 20px; font-size: 0.9rem; color: #cbd5e1; }
+    .content { padding: 40px; }
+    .section { margin-bottom: 35px; }
+    .section-title { font-size: 1.3rem; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .badge { background: #e0f2fe; color: #0369a1; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+    .project-card { background: #f8fafc; border-left: 4px solid #0284c7; padding: 15px 20px; border-radius: 0 6px 6px 0; margin-bottom: 15px; }
+    .project-card h3 { font-size: 1.1rem; color: #0f172a; }
+    .project-card p { font-size: 0.95rem; color: #475569; margin-top: 5px; }
+    footer { background: #f1f5f9; text-align: center; padding: 15px; font-size: 0.85rem; color: #64748b; border-top: 1px solid #e2e8f0; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Anzil</h1>
-    <p><strong>DevOps Engineer</strong> | AWS & CI/CD Enthusiast</p>
-    
-    <h2>Professional Summary</h2>
-    <p>Motivated DevOps enthusiast with practical experience in automated web deployments, continuous integration pipelines, AWS EC2 management, and Nginx web servers.</p>
+    <header>
+      <h1>Anzil</h1>
+      <p>DevOps & Cloud Systems Engineer</p>
+      <div class="contact-info">
+        <span>📍 Kerala, India</span>
+        <span>🌐 AWS Hosted via CI/CD</span>
+      </div>
+    </header>
 
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Cloud & Infrastructure:</strong> AWS EC2, Nginx</li>
-      <li><strong>CI/CD & Version Control:</strong> GitHub Actions, Git</li>
-      <li><strong>Operating Systems:</strong> Linux (Ubuntu)</li>
-    </ul>
+    <div class="content">
+      <div class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p>Results-driven DevOps practitioner specializing in automated deployments, CI/CD pipeline architecture, Linux system administration, and cloud infrastructure management on AWS.</p>
+      </div>
 
-    <h2>Projects</h2>
-    <p><strong>AWS Automated Resume Pipeline:</strong> Configured an automated CI/CD deployment using GitHub Actions and SSH on AWS EC2.</p>
+      <div class="section">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+          <span class="badge">AWS (EC2, Nginx)</span>
+          <span class="badge">GitHub Actions (CI/CD)</span>
+          <span class="badge">Linux / Bash Scripting</span>
+          <span class="badge">Git & Version Control</span>
+          <span class="badge">CCNA / Networking</span>
+          <span class="badge">Docker Basics</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Featured DevOps Projects</h2>
+        
+        <div class="project-card">
+          <h3>Automated Resume Deployment Pipeline (AWS & GitHub Actions)</h3>
+          <p>Engineered an end-to-end continuous deployment pipeline using GitHub Actions to automatically deploy code updates to an AWS EC2 instance running Nginx via secure SSH integration.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>AWS-Hosted Interactive Web Game</h3>
+          <p>Configured an automated pipeline for a lightweight JavaScript game application, managing server ownership rules, custom Nginx routing, and zero-downtime pushes.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Deployed automatically via GitHub Actions pipeline on AWS EC2</p>
+    </footer>
   </div>
 </body>
 </html>
