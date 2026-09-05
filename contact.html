@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anzil | Contact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --border: #475569;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; padding: 40px 20px; max-width: 900px; margin: 0 auto; }
+
+    /* Navigation Bar */
+    .navbar { background: var(--bg-secondary); padding: 15px 20px; border-radius: 8px; margin-bottom: 30px; border: 1px solid var(--border); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; padding: 6px 12px; border-radius: 4px; transition: all 0.2s ease; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); background: var(--bg-card); }
+
+    h1 { color: var(--text-main); font-size: 2.2rem; margin-bottom: 10px; }
+    .subtitle { color: var(--text-muted); margin-bottom: 30px; }
+
+    /* Contact Layout */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    .contact-card { background: var(--bg-secondary); border: 1px solid var(--border); padding: 30px; border-radius: 12px; }
+    
+    .info-item { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+    .info-item:last-child { margin-bottom: 0; }
+    .icon-box { width: 45px; height: 45px; background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 1.2rem; flex-shrink: 0; }
+    .info-details h3 { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .info-details a, .info-details p { color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 1rem; }
+    .info-details a:hover { color: var(--accent); }
+
+    /* Deployment Metadata Box */
+    .env-box { background: var(--bg-primary); border: 1px solid var(--border); padding: 20px; border-radius: 8px; margin-top: 25px; font-size: 0.85rem; color: var(--text-muted); }
+    .env-box p { margin-bottom: 8px; }
+    .env-box p:last-child { margin-bottom: 0; }
+
+    footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+  <!-- Multi-Page Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <h1>Get In Touch</h1>
+  <p class="subtitle">Feel free to reach out for DevOps opportunities, collaboration, or system inquiries.</p>
+
+  <div class="contact-grid">
+    <!-- Contact Details -->
+    <div class="contact-card">
+      <div class="info-item">
+        <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+        <div class="info-details">
+          <h3>Email</h3>
+          <a href="mailto:anzilkm13@gmail.com">anzilkm13@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+        <div class="info-details">
+          <h3>Phone</h3>
+          <a href="tel:+919037375605">+91 9037375605</a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="icon-box"><i class="fa-brands fa-linkedin-in"></i></div>
+        <div class="info-details">
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/anzil-km" target="_blank" rel="noopener noreferrer">linkedin.com/in/anzil-km</a>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="info-details">
+          <h3>Location</h3>
+          <p>Kerala, India</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Infrastructure Specs -->
+    <div class="contact-card">
+      <h3 style="color: var(--accent); margin-bottom: 15px; font-size: 1.1rem;"><i class="fa-solid fa-server"></i> Deployment Environment</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">
+        This contact portal and resume application are automatically built and deployed via an integrated CI/CD pipeline.
+      </p>
+
+      <div class="env-box">
+        <p><strong>Hosting:</strong> AWS EC2 (Ubuntu 24.04 LTS)</p>
+        <p><strong>Web Server:</strong> Nginx Reverse Proxy</p>
+        <p><strong>CI/CD Engine:</strong> GitHub Actions (SSH deployment)</p>
+        <p><strong>Repository:</strong> <code>resume-aws-pipeline</code></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Designed & Deployed by Anzil via GitHub Actions Pipeline</p>
+  </footer>
+
+</body>
+</html>
