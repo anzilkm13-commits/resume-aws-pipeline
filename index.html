@@ -29,22 +29,36 @@
     .nav-links a:hover, .nav-links a.active { color: var(--accent); background: var(--bg-card); }
 
     /* Header Profile */
-    header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; background: var(--bg-secondary); padding: 40px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 30px; gap: 20px; }
-    .profile-info h1 { font-size: 2.5rem; color: var(--text-main); letter-spacing: -0.5px; }
-    .profile-info h2 { font-size: 1.2rem; color: var(--accent); font-weight: 500; margin-top: 5px; }
-    .profile-info p { color: var(--text-muted); margin-top: 10px; font-size: 0.95rem; }
+    header { display: flex; flex-wrap: wrap; align-items: center; background: var(--bg-secondary); padding: 30px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 25px; gap: 25px; }
+    .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; flex-shrink: 0; }
+    .profile-info h1 { font-size: 2.2rem; color: var(--text-main); letter-spacing: -0.5px; }
+    .profile-info h2 { font-size: 1.1rem; color: var(--accent); font-weight: 500; margin-top: 2px; }
+    .profile-info p { color: var(--text-muted); margin-top: 8px; font-size: 0.9rem; }
     
-    .status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-top: 15px; }
+    .status-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(56, 189, 248, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-top: 12px; }
     .status-dot { width: 8px; height: 8px; background-color: #22c55e; border-radius: 50%; box-shadow: 0 0 8px #22c55e; }
+
+    /* Hero Banner */
+    .hero-banner { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 30px; height: 180px; background: #111; }
+    .hero-banner img { width: 100%; height: 100%; object-fit: cover; opacity: 0.35; }
+    .hero-overlay { position: absolute; bottom: 20px; left: 20px; right: 20px; }
+    .hero-overlay h3 { color: #fff; font-size: 1.3rem; display: flex; align-items: center; gap: 10px; }
+    .hero-overlay p { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; }
 
     /* Grid Layout */
     .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
     @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
 
     /* Cards & Sections */
-    .section { background: var(--bg-secondary); padding: 30px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 30px; }
-    .section-title { font-size: 1.25rem; font-weight: 700; color: var(--text-main); border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .section { background: var(--bg-secondary); padding: 25px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 30px; }
+    .section-title { font-size: 1.2rem; font-weight: 700; color: var(--text-main); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
     .section-title i { color: var(--accent); }
+
+    /* Architecture Flow Graphic */
+    .pipeline-flow { display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; gap: 15px; background: var(--bg-primary); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; }
+    .flow-step i { font-size: 2.2rem; }
+    .flow-step p { font-weight: 600; font-size: 0.85rem; margin-top: 6px; }
+    .flow-step span { font-size: 0.75rem; color: var(--text-muted); display: block; }
 
     /* Skills Badges */
     .skills-flex { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -53,13 +67,13 @@
     /* Project Cards */
     .project-card { background: var(--bg-primary); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 15px; transition: transform 0.2s ease, border-color 0.2s ease; }
     .project-card:hover { transform: translateY(-2px); border-color: var(--accent); }
-    .project-card h3 { font-size: 1.1rem; color: var(--text-main); margin-bottom: 8px; }
-    .project-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; }
+    .project-card h3 { font-size: 1.05rem; color: var(--text-main); margin-bottom: 8px; }
+    .project-card p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; }
     .project-tags { display: flex; gap: 8px; flex-wrap: wrap; }
     .tag { font-size: 0.75rem; background: rgba(56, 189, 248, 0.15); color: var(--accent); padding: 3px 8px; border-radius: 4px; font-weight: 600; }
 
     /* Terminal Widget */
-    .terminal-box { background: #000; border-radius: 8px; border: 1px solid var(--border); font-family: 'Courier New', Courier, monospace; padding: 15px; font-size: 0.85rem; color: #38bdf8; overflow-x: auto; }
+    .terminal-box { background: #000; border-radius: 8px; border: 1px solid var(--border); font-family: 'Courier New', Courier, monospace; padding: 15px; font-size: 0.82rem; color: #38bdf8; overflow-x: auto; }
     .terminal-header { color: var(--text-muted); font-size: 0.75rem; border-bottom: 1px solid #222; padding-bottom: 5px; margin-bottom: 10px; }
 
     footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 40px; }
@@ -77,10 +91,12 @@
       </div>
     </nav>
 
-    <!-- Header Section -->
+    <!-- Header Profile with Photo -->
     <header>
+      <img src="profile.jpg" alt="Anzil" class="profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Anzil&background=0284c7&color=fff&size=128'">
+      
       <div class="profile-info">
-        <h1>Anzil KM</h1>
+        <h1>Anzil</h1>
         <h2>DevOps & Cloud Systems Specialist</h2>
         <p><i class="fa-solid fa-location-dot"></i> Kerala, India &nbsp;|&nbsp; <i class="fa-solid fa-network-wired"></i> CCNA Trained &nbsp;|&nbsp; <i class="fa-brands fa-aws"></i> AWS Practitioner</p>
         <div class="status-badge">
@@ -89,9 +105,18 @@
       </div>
     </header>
 
+    <!-- Visual Hero Banner -->
+    <div class="hero-banner">
+      <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?q=80&w=1000&auto=format&fit=crop" alt="DevOps Infrastructure Banner">
+      <div class="hero-overlay">
+        <h3><i class="fa-solid fa-cloud-arrow-up" style="color: var(--accent);"></i> Cloud-Native Infrastructure & Automation</h3>
+        <p>Automating deployment pipelines, Linux web services, and cloud hosting on AWS.</p>
+      </div>
+    </div>
+
     <!-- Main Grid -->
     <div class="grid">
-      <!-- Left Column: Summary & Featured Projects -->
+      <!-- Left Column: Summary, Pipeline Diagram & Projects -->
       <div>
         <div class="section">
           <h2 class="section-title"><i class="fa-solid fa-user"></i> Professional Summary</h2>
@@ -100,8 +125,45 @@
           </p>
         </div>
 
+        <!-- Visual DevOps Architecture Diagram -->
         <div class="section">
-          <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Featured Projects</h2>
+          <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Continuous Deployment Pipeline</h2>
+          
+          <div class="pipeline-flow">
+            <div class="flow-step">
+              <i class="fa-brands fa-github" style="color: #38bdf8;"></i>
+              <p>1. Git Push</p>
+              <span>`main` Branch</span>
+            </div>
+
+            <i class="fa-solid fa-arrow-right" style="color: var(--accent);"></i>
+
+            <div class="flow-step">
+              <i class="fa-solid fa-gears" style="color: #a855f7;"></i>
+              <p>2. Actions</p>
+              <span>SSH Runner</span>
+            </div>
+
+            <i class="fa-solid fa-arrow-right" style="color: var(--accent);"></i>
+
+            <div class="flow-step">
+              <i class="fa-brands fa-aws" style="color: #ff9900;"></i>
+              <p>3. AWS EC2</p>
+              <span>Ubuntu Server</span>
+            </div>
+
+            <i class="fa-solid fa-arrow-right" style="color: var(--accent);"></i>
+
+            <div class="flow-step">
+              <i class="fa-solid fa-server" style="color: #22c55e;"></i>
+              <p>4. Nginx</p>
+              <span>Live Port 80</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title"><i class="fa-solid fa-folder-open"></i> Featured Projects</h2>
           
           <div class="project-card">
             <h3>Automated Resume Deployment Pipeline</h3>
